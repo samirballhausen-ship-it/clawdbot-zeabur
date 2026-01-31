@@ -1,0 +1,9 @@
+# Verhindere unnötige Files im Image
+*.png
+*.pdf
+*.html
+.git
+.venv
+node_modules
+memory/
+knowledge-base/

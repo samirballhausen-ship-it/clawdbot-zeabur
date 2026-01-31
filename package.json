@@ -1,0 +1,8 @@
+{
+  "name": "clawdbot-zeabur",
+  "version": "1.0.0",
+  "description": "Clawdbot Cloud Deployment",
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

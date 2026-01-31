@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.1.24-3",
+    "lastTouchedAt": "2026-01-31T05:25:31.183Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-01-31T05:05:37.228Z",
+    "lastRunVersion": "2026.1.24-3",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "enabled": false,
+    "cdpUrl": "http://127.0.0.1:9222",
+    "headless": false,
+    "noSandbox": true
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "token"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "sonnet",
+        "fallbacks": [
+          "haiku",
+          "opus"
+        ]
+      },
+      "models": {
+        "anthropic/claude-opus-4-5": {
+          "alias": "opus"
+        },
+        "anthropic/claude-sonnet-4-20250514": {
+          "alias": "sonnet"
+        },
+        "anthropic/claude-3-5-haiku-20241022": {
+          "alias": "haiku"
+        }
+      },
+      "workspace": "/app/workspace",
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "typingIntervalSeconds": 4,
+      "typingMode": "instant",
+      "heartbeat": {
+        "every": "1h"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "tools": {
+    "web": {}
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8583702683:AAG3zSGOOHDTy8dbbe02Wn9uViK_vXXcrug",
+      "groupPolicy": "allowlist",
+      "streamMode": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "remote",
+    "bind": "0.0.0.0",
+    "auth": {
+      "mode": "token",
+      "token": "82b5fd0c31f2ef0bd9ca42194aeec091434c270835f74166"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "remote": {
+      "url": "ws://127.0.0.1:18789",
+      "token": "clawdbot2026samir"
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    },
+    "entries": {}
+  },
+  "plugins": {
+    "slots": {
+      "memory": "memory-lancedb"
+    },
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "lobster": {
+        "enabled": false
+      },
+      "voice-call": {
+        "enabled": false
+      },
+      "memory-lancedb": {
+        "enabled": false
+      },
+      "memory-core": {
+        "enabled": false
+      }
+    }
+  }
+}
